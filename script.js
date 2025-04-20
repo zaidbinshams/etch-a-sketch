@@ -15,8 +15,14 @@ function makeTheGrid(size = 16, sketchpad = container) {
             square.setAttribute("style",
                 "flex: 1; height: 100%; aspect-ratio: 1/1; background-color: rgb(200,200,200); outline: 1px solid white");
             square.style.width = (650/size)+'px';
-            square.addEventListener("mouseover", (event) => {
-            square.style.backgroundColor = "rgb(100,100,100)";
+            let dark = 1;
+            square.addEventListener("mouseover", () => {
+                let r = Math.round(Math.random()*255);
+                let g = Math.round(Math.random()*255);
+                let b = Math.round(Math.random()*255);
+                square.style.backgroundColor = `rgb(${r},${g},${b})`;
+                square.style.opacity = dark;
+                dark -= 0.1;
             });
             // square.textContent = `${i+1},${j+1}`;
             subDiv.appendChild(square);
