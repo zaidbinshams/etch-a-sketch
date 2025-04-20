@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+}
+
+div.container {
+    width: 50%;
+    aspect-ratio: 1/1;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    /* outline: 1px solid white; */
+}
